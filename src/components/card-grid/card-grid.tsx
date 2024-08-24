@@ -2,10 +2,11 @@ import { Card, CardProps } from '../card'
 import './card-grid.styles.scss'
 
 export interface CardGridProps {
-  cards: CardProps[]
+  cards: Omit<CardProps, 'onRemove'>[]
+  onRemoveCard: (id: string) => void
 }
 
-export function CardGrid({ cards = [] }: CardGridProps) {
+export function CardGrid({ cards = [], onRemoveCard }: CardGridProps) {
   if (!cards.length) {
     return (
       <div className="card-grid card-grid__empty">
@@ -16,14 +17,16 @@ export function CardGrid({ cards = [] }: CardGridProps) {
 
   return (
     <div className="card-grid card-grid__grid">
-      {cards.map(({ id, imageDimensions, imageSrc, imageAlt }) => {
+      {cards.map(({ attack, defense, health, id, image }) => {
         return (
           <Card
             key={id}
             id={id}
-            imageDimensions={imageDimensions}
-            imageSrc={imageSrc}
-            imageAlt={imageAlt}
+            attack={attack}
+            defense={defense}
+            health={health}
+            image={image}
+            onRemove={onRemoveCard}
           />
         )
       })}

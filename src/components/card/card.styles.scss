@@ -5,9 +5,23 @@
   flex-direction: column;
   justify-content: space-between;
 
+  position: relative;
+
   border: 1px solid var(--card-border);
   border-radius: 4px;
   background-color: var(--card-bg);
+
+  &__remove {
+    position: absolute;
+    right: 0;
+
+    cursor: pointer;
+
+    background-color: white;
+    padding: 2px 4px;
+
+    color: black;
+  }
 
   &__content {
     display: flex;

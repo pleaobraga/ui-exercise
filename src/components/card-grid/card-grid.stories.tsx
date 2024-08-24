@@ -17,17 +17,20 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     cards: [...CARD_GRID_MOCK],
+    onRemoveCard: () => {},
   },
 }
 
 export const TwoRows: Story = {
   args: {
     cards: [...CARD_GRID_MOCK_2_ROWS],
+    onRemoveCard: () => {},
   },
 }
 
 export const Empty: Story = {
   args: {
     cards: [],
+    onRemoveCard: () => {},
   },
 }

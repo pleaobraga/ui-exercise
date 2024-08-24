@@ -8,15 +8,19 @@ export function getCharacterImage() {
   return images[index]
 }
 
-export function getNewChar(cardsLength: number) {
+export function getNewChar(cardID: number) {
   const charImage = getCharacterImage()
 
+  console.log('charImage', charImage)
+
   return {
-    id: 'card-id-' + cardsLength,
+    id: 'card-id-' + cardID,
     attack: 0,
     health: 0,
     defense: 0,
-    imageDimensions: charImage.dimensions,
-    imageSrc: charImage.url,
+    image: {
+      src: charImage.url,
+      dimensions: charImage.dimensions,
+    },
   }
 }

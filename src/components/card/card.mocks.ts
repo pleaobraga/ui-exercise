@@ -2,6 +2,11 @@ import { images } from '../../utils/images'
 
 export const CARD_MOCK = {
   id: 'CARD MOCK',
-  imageSrc: images[0].url,
-  imageDimensions: images[0].dimensions,
+  image: {
+    src: images[0].url,
+    dimensions: images[0].dimensions,
+  },
+  health: 100,
+  attack: 50,
+  defense: 40,
 }
