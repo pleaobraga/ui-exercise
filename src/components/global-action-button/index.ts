@@ -1,1 +1,1 @@
-export { Button } from './global-action-button'
+export { GlobalActionButton } from './global-action-button'

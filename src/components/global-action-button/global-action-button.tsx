@@ -1,11 +1,14 @@
 import './global-action-button.styles.scss'
 
-export interface ButtonProps
+export interface GlobalActionButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string
 }
 
-export function Button({ text, ...props }: ButtonProps) {
+export function GlobalActionButton({
+  text,
+  ...props
+}: GlobalActionButtonProps) {
   return (
     <button className="global-action-button" {...props}>
       {text}

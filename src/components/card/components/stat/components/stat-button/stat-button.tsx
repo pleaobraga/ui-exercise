@@ -7,7 +7,11 @@ export interface StatButtonProps
 
 export function StatButton({ kind, ...props }: StatButtonProps) {
   return (
-    <button className={`stat-button stat-button--${kind}`} {...props}>
+    <button
+      className={`stat-button stat-button--${kind}`}
+      {...props}
+      aria-label={`${kind}--button`}
+    >
       <span className="stat-button__content">
         {kind === 'increment' ? '+' : '-'}
       </span>
