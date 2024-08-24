@@ -2,6 +2,8 @@
 
 This project is a TypeScript-based React application designed to implement various components and features using modern frontend technologies.
 
+This solution replicates a provided mockup using React, focusing on creating a responsive application with specific styles and behaviors. Each card includes randomized header images and controls for adjusting health, attack, and defense stats. The application allows adding new characters with randomized images and resetting all characters' health with global actions. The design is responsive, ensuring cards adapt to different screen sizes, and includes bonus features like character removal and hover effects for an enhanced user experience.
+
 ![Application running](./docs/application-running.gif)
 
 ## Key Technologies and Libraries Used
@@ -21,16 +23,8 @@ The project is organized into several directories to maintain a clean and scalab
 ```
 src
 ├── components
-│   ├── component
-│       ├── component.constants.ts
-│       ├── component.mocks.ts
-│       ├── component.stories.tsx
-│       ├── component.styles.scss
-│       ├── component.tsx
-│       ├── component.types.ts
-│       ├── component.test.tsx
-│       ├── components
-│       └── index.ts
+│   ├── card
+│   ├── global-action-button
 ├── pages
 │   └── cards-page
 ├── utils
@@ -38,26 +32,6 @@ src
 ├── index.css
 ├── main.tsx
 ```
-
-### Components
-
-- **Card Component** (`components/card`): This directory contains all files related to the Card component, including the main implementation (`card.tsx`), styling (`card.styles.scss`), types (`card.types.ts`), constants (`card.constants.ts`), mocks (`card.mocks.ts`), tests (`cards.test.tsx`), and Storybook stories (`card.stories.tsx`).
-
-- **Global Action Button Component** (`components/global-action-button`): Similar structure to `card` with its own files for mocks, stories, styles, tests, and main implementation.
-
-### Pages
-
-- **Cards Page** (`pages/cards-page`): Contains the implementation of a specific page that likely utilizes the card components.
-
-### Utilities
-
-- **Utils Directory** (`utils`): A place for utility functions and helper files that can be reused across the project.
-
-### Main Files
-
-- **App.tsx**: The main application component.
-- **index.css**: The global CSS file.
-- **main.tsx**: The entry point for the React application.
 
 ## Getting Started
 
