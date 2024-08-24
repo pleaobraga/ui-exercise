@@ -23,7 +23,10 @@ export function CardsPage() {
       prev.map((item) => {
         return {
           ...item,
-          health: 0,
+          attributes: {
+            ...item.attributes,
+            health: 0,
+          },
         }
       })
     )
