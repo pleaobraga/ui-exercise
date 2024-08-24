@@ -12,6 +12,9 @@ export default defineConfig({
       exclude: [
         '**/*.stories.@(js|jsx|mjs|ts|tsx)/**',
         '**/*.mocks.ts',
+        '**/*.types.ts',
+        '**/*.constants.ts',
+        '**/index.ts',
         'src/main.tsx',
         'src/App.tsx',
         ...coverageConfigDefaults.exclude,
