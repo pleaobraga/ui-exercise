@@ -17,7 +17,7 @@ export function CardGrid({
   if (!cards.length) {
     return (
       <div className="card-grid card-grid__empty">
-        <span>There's no cards to show</span>
+        <span>There's no card to show</span>
       </div>
     )
   }

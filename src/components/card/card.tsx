@@ -11,8 +11,6 @@ export function Card({
   handleIncrement,
   ...props
 }: CardProps) {
-  console.log('props', props)
-
   return (
     <div className="card">
       <button className="card__remove" onClick={() => onRemove(id)}>
@@ -20,10 +18,9 @@ export function Card({
       </button>
       <div>
         <img
+          className="card__image"
           src={image.src}
           alt={image?.alt ?? 'card image'}
-          height={image.dimensions.height}
-          width={image.dimensions.width}
         />
       </div>
       <div className="card__content">

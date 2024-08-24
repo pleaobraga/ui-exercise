@@ -10,7 +10,7 @@ export interface CardElement {
   image: {
     src: string
     alt?: string
-    dimensions: {
+    dimensions?: {
       width: number
       height: number
     }
