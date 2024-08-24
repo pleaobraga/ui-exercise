@@ -18,6 +18,8 @@ export function CardsPage() {
     setCardID((prev) => prev + 1)
   }
 
+  console.log('test')
+
   function attackAllCards() {
     setCards((prev) =>
       prev.map((item) => {
