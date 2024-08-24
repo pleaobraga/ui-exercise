@@ -2,23 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 
   &__placeholder-container {
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
 
     color: white;
 
     .title {
       text-transform: capitalize;
     }
-
-    .value {
-    }
   }
 
   &__actions-container {
     display: flex;
-    gap: 4px;
+    gap: 0.5rem;
   }
 }

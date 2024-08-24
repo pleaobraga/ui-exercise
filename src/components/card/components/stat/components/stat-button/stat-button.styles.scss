@@ -1,6 +1,9 @@
 @import '../../../../../../index.css';
 
 .stat-button {
+  border-radius: 2px;
+  cursor: pointer;
+
   &--increment {
     background-color: var(--btn-increment);
 
@@ -15,9 +18,5 @@
     &:hover {
       background-color: var(--btn-decrement-hover);
     }
-  }
-
-  &__content {
-    font-size: 1.2rem;
   }
 }
