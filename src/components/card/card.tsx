@@ -9,6 +9,7 @@ import {
 import { useState } from 'react'
 
 export interface CardProps {
+  id: string
   imageSrc: string
   imageAlt?: string
   imageDimensions: {

@@ -1,5 +1,3 @@
-import './App.css'
-
 function App() {
   return <h1>UI exercise</h1>
 }
