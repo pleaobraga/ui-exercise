@@ -1,14 +1,22 @@
 import { images } from '../../utils/images'
 
+export const FUNCTIONS_MOCK = {
+  onRemoveCard: () => {},
+  onDecrement: () => {},
+  onIncrement: () => {},
+}
+
 export const CARD_MOCK_1 = {
   id: 'CARD MOCK 1',
   image: {
     src: images[0].url,
     dimensions: images[0].dimensions,
   },
-  health: 100,
-  attack: 50,
-  defense: 40,
+  attributes: {
+    health: 100,
+    attack: 50,
+    defense: 40,
+  },
 }
 
 export const CARD_MOCK_2 = {
@@ -17,9 +25,11 @@ export const CARD_MOCK_2 = {
     src: images[1].url,
     dimensions: images[1].dimensions,
   },
-  health: 100,
-  attack: 50,
-  defense: 40,
+  attributes: {
+    health: 100,
+    attack: 50,
+    defense: 40,
+  },
 }
 
 export const CARD_MOCK_3 = {
@@ -28,9 +38,11 @@ export const CARD_MOCK_3 = {
     src: images[2].url,
     dimensions: images[2].dimensions,
   },
-  health: 100,
-  attack: 50,
-  defense: 40,
+  attributes: {
+    health: 100,
+    attack: 50,
+    defense: 40,
+  },
 }
 
 export const CARD_MOCK_4 = {
@@ -39,9 +51,11 @@ export const CARD_MOCK_4 = {
     src: images[0].url,
     dimensions: images[0].dimensions,
   },
-  health: 100,
-  attack: 50,
-  defense: 40,
+  attributes: {
+    health: 100,
+    attack: 50,
+    defense: 40,
+  },
 }
 
 export const CARD_MOCK_5 = {
@@ -50,9 +64,11 @@ export const CARD_MOCK_5 = {
     src: images[1].url,
     dimensions: images[1].dimensions,
   },
-  health: 100,
-  attack: 50,
-  defense: 40,
+  attributes: {
+    health: 100,
+    attack: 50,
+    defense: 40,
+  },
 }
 
 export const CARD_MOCK_6 = {
@@ -61,9 +77,11 @@ export const CARD_MOCK_6 = {
     src: images[2].url,
     dimensions: images[2].dimensions,
   },
-  health: 100,
-  attack: 50,
-  defense: 40,
+  attributes: {
+    health: 100,
+    attack: 50,
+    defense: 40,
+  },
 }
 
 export const CARD_GRID_MOCK = [CARD_MOCK_1, CARD_MOCK_2, CARD_MOCK_3]

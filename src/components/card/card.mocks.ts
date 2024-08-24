@@ -6,7 +6,12 @@ export const CARD_MOCK = {
     src: images[0].url,
     dimensions: images[0].dimensions,
   },
-  health: 100,
-  attack: 50,
-  defense: 40,
+  attributes: {
+    health: 100,
+    attack: 50,
+    defense: 40,
+  },
+  onRemove: () => {},
+  handleIncrement: () => {},
+  handleDecrement: () => {},
 }

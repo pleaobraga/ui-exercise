@@ -1,6 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { CardGrid } from '.'
-import { CARD_GRID_MOCK, CARD_GRID_MOCK_2_ROWS } from './card-grid.mocks'
+import {
+  CARD_GRID_MOCK,
+  CARD_GRID_MOCK_2_ROWS,
+  FUNCTIONS_MOCK,
+} from './card-grid.mocks'
 
 const meta = {
   title: 'Components/Card Grid',
@@ -9,6 +13,9 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  args: {
+    ...FUNCTIONS_MOCK,
+  },
 } satisfies Meta<typeof CardGrid>
 
 export default meta
@@ -17,20 +24,17 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     cards: [...CARD_GRID_MOCK],
-    onRemoveCard: () => {},
   },
 }
 
 export const TwoRows: Story = {
   args: {
     cards: [...CARD_GRID_MOCK_2_ROWS],
-    onRemoveCard: () => {},
   },
 }
 
 export const Empty: Story = {
   args: {
     cards: [],
-    onRemoveCard: () => {},
   },
 }

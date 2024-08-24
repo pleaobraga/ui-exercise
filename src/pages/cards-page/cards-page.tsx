@@ -1,9 +1,11 @@
 import { useState } from 'react'
+
+import { getNewChar } from './cards-page.utils'
 import { CardGrid } from '../../components/card-grid'
 import { GlobalActionButton } from '../../components/global-action-button'
-import './cards-page.styles.scss'
-import { getNewChar } from './cards-page.utils'
 import { Attributes, CardElement } from '../../components/card'
+
+import './cards-page.styles.scss'
 
 export function CardsPage() {
   const [cards, setCards] = useState<Array<CardElement>>([])
