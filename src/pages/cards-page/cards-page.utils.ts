@@ -11,8 +11,6 @@ export function getCharacterImage() {
 export function getNewChar(cardID: number) {
   const charImage = getCharacterImage()
 
-  console.log('charImage', charImage)
-
   return {
     id: 'card-id-' + cardID,
     attack: 0,

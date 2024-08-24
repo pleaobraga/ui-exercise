@@ -9,8 +9,6 @@ export function CardsPage() {
   const [cards, setCards] = useState<Array<CardElement>>([])
   const [cardID, setCardID] = useState(0)
 
-  console.log(cards)
-
   function addNewCharacter() {
     const newCharacter = getNewChar(cardID)
 

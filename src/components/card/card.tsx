@@ -38,8 +38,6 @@ export function Card({ id, image, onRemove, ...props }: CardProps) {
     console.log(id)
   }
 
-  console.log('image', image)
-
   return (
     <div className="card">
       <button className="card__remove" onClick={() => onRemove(id)}>
