@@ -1,18 +1,18 @@
 import './card.styles.scss'
 import { Stat } from './components/stat'
 import {
-  ATTACK_STATS,
+  ATTACK_STAT,
   CARD_STATS,
-  DEFENSE_STATS,
-  HEALTH_STATS,
+  DEFENSE_STAT,
+  HEALTH_STAT,
 } from './card.constants'
 import { useState } from 'react'
 
 export function Card() {
   const [statsValue, setStatsValue] = useState({
-    [HEALTH_STATS.id]: HEALTH_STATS.defaultValue,
-    [ATTACK_STATS.id]: ATTACK_STATS.defaultValue,
-    [DEFENSE_STATS.id]: DEFENSE_STATS.defaultValue,
+    [HEALTH_STAT.id]: HEALTH_STAT.defaultValue,
+    [ATTACK_STAT.id]: ATTACK_STAT.defaultValue,
+    [DEFENSE_STAT.id]: DEFENSE_STAT.defaultValue,
   })
 
   const hanldeIncrement = (id: keyof typeof statsValue) => {

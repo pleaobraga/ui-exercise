@@ -1,19 +1,21 @@
-export const HEALTH_STATS = {
+export const DEFAULT_STAT_VALUE = 0
+
+export const HEALTH_STAT = {
   id: 'health',
   name: 'health',
-  defaultValue: 100,
+  defaultValue: DEFAULT_STAT_VALUE,
 }
 
-export const ATTACK_STATS = {
+export const ATTACK_STAT = {
   id: 'attack',
   name: 'attack',
-  defaultValue: 0,
+  defaultValue: DEFAULT_STAT_VALUE,
 }
 
-export const DEFENSE_STATS = {
+export const DEFENSE_STAT = {
   id: 'defense',
   name: 'defense',
-  defaultValue: 50,
+  defaultValue: DEFAULT_STAT_VALUE,
 }
 
-export const CARD_STATS = [HEALTH_STATS, ATTACK_STATS, DEFENSE_STATS]
+export const CARD_STATS = [HEALTH_STAT, ATTACK_STAT, DEFENSE_STAT]
