@@ -1,0 +1,23 @@
+.stat {
+  display: flex;
+  justify-content: space-between;
+
+  &__placeholder-container {
+    display: flex;
+    gap: 8px;
+
+    color: white;
+
+    .title {
+      text-transform: capitalize;
+    }
+
+    .value {
+    }
+  }
+
+  &__actions-container {
+    display: flex;
+    gap: 4px;
+  }
+}

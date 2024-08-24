@@ -1,0 +1,15 @@
+@import '../../index.css';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  background-color: var(--card-bg);
+
+  &__content {
+    padding: 20px 16px;
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../../../../../index.css';
+
+.stat-button {
+  &--increment {
+    background-color: var(--btn-increment);
+
+    &:hover {
+      background-color: var(--btn-increment-hover);
+    }
+  }
+
+  &--decrement {
+    background-color: var(--btn-decrement);
+
+    &:hover {
+      background-color: var(--btn-decrement-hover);
+    }
+  }
+
+  &__content {
+    font-size: 1.2rem;
+  }
+}

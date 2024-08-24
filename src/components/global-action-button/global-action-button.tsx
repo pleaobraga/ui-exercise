@@ -1,4 +1,4 @@
-import './global-action-button.style.scss'
+import './global-action-button.styles.scss'
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
