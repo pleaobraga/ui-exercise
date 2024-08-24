@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import { getNewChar } from './cards-page.utils'
-import { CardGrid } from '../../components/card-grid'
+import { CardGrid } from './components/card-grid'
 import { GlobalActionButton } from '../../components/global-action-button'
 import { Attributes, CardElement } from '../../components/card'
 

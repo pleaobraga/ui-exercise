@@ -1,4 +1,4 @@
-import { Attributes, Card, CardElement } from '../card'
+import { Attributes, Card, CardElement } from '../../../../components/card'
 import './card-grid.styles.scss'
 
 export interface CardGridProps {
