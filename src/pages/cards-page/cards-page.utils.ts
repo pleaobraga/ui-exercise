@@ -2,6 +2,8 @@ import { images } from '../../utils/images'
 
 const IMAGES_LENGTH = 3
 
+const DEFAULT_ATTRIBUTE_VALUE = 0
+
 export function getCharacterImage() {
   const index = Math.floor(Math.random() * IMAGES_LENGTH)
 
@@ -13,9 +15,11 @@ export function getNewChar(cardID: number) {
 
   return {
     id: 'card-id-' + cardID,
-    attack: 0,
-    health: 0,
-    defense: 0,
+    attributes: {
+      attack: DEFAULT_ATTRIBUTE_VALUE,
+      health: DEFAULT_ATTRIBUTE_VALUE,
+      defense: DEFAULT_ATTRIBUTE_VALUE,
+    },
     image: {
       src: charImage.url,
       dimensions: charImage.dimensions,

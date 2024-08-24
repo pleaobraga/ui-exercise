@@ -1,14 +1,16 @@
+import { Attributes } from './card.types'
+
 export const HEALTH_STAT = {
-  id: 'health',
+  id: 'health' as keyof Attributes,
   name: 'health',
 }
 
 export const ATTACK_STAT = {
-  id: 'attack',
+  id: 'attack' as keyof Attributes,
   name: 'attack',
 }
 
 export const DEFENSE_STAT = {
-  id: 'defense',
+  id: 'defense' as keyof Attributes,
   name: 'defense',
 }

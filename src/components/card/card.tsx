@@ -1,42 +1,17 @@
 import './card.styles.scss'
 import { Stat } from './components/stat'
 import { ATTACK_STAT, DEFENSE_STAT, HEALTH_STAT } from './card.constants'
+import { CardProps } from './card.types'
 
-export interface CardElement {
-  id: string
-  health: number
-  attack: number
-  defense: number
-  image: {
-    src: string
-    alt?: string
-    dimensions: {
-      width: number
-      height: number
-    }
-  }
-}
-
-export interface CardProps extends CardElement {
-  onRemove: (id: string) => void
-}
-
-export function Card({ id, image, onRemove, ...props }: CardProps) {
-  // const handleIncrement = (id: keyof typeof statsValue) => {
-  //   setStatsValue((prev) => ({ ...prev, [id]: prev[id] + 1 }))
-  // }
-
-  // const handleDecrement = (id: keyof typeof statsValue) => {
-  //   setStatsValue((prev) => ({ ...prev, [id]: prev[id] - 1 }))
-  // }
-
-  const handleIncrement = (id: string) => {
-    console.log(id)
-  }
-
-  const handleDecrement = (id: string) => {
-    console.log(id)
-  }
+export function Card({
+  id,
+  image,
+  onRemove,
+  handleDecrement,
+  handleIncrement,
+  ...props
+}: CardProps) {
+  console.log('props', props)
 
   return (
     <div className="card">
@@ -55,23 +30,23 @@ export function Card({ id, image, onRemove, ...props }: CardProps) {
         <Stat
           key={HEALTH_STAT.id}
           name={HEALTH_STAT.name}
-          value={props.attack}
-          onDecrement={() => handleDecrement(id)}
-          onIncrement={() => handleIncrement(id)}
+          value={props.attributes.health}
+          onDecrement={() => handleDecrement(id, HEALTH_STAT.id)}
+          onIncrement={() => handleIncrement(id, HEALTH_STAT.id)}
         />
         <Stat
           key={ATTACK_STAT.id}
           name={ATTACK_STAT.name}
-          value={props.attack}
-          onDecrement={() => handleDecrement(id)}
-          onIncrement={() => handleIncrement(id)}
+          value={props.attributes.attack}
+          onDecrement={() => handleDecrement(id, ATTACK_STAT.id)}
+          onIncrement={() => handleIncrement(id, ATTACK_STAT.id)}
         />
         <Stat
           key={DEFENSE_STAT.id}
           name={DEFENSE_STAT.name}
-          value={props.defense}
-          onDecrement={() => handleDecrement(id)}
-          onIncrement={() => handleIncrement(id)}
+          value={props.attributes.defense}
+          onDecrement={() => handleDecrement(id, DEFENSE_STAT.id)}
+          onIncrement={() => handleIncrement(id, DEFENSE_STAT.id)}
         />
       </div>
     </div>

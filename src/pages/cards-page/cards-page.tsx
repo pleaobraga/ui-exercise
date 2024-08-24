@@ -3,7 +3,7 @@ import { CardGrid } from '../../components/card-grid'
 import { GlobalActionButton } from '../../components/global-action-button'
 import './cards-page.styles.scss'
 import { getNewChar } from './cards-page.utils'
-import { CardElement } from '../../components/card/card'
+import { Attributes, CardElement } from '../../components/card'
 
 export function CardsPage() {
   const [cards, setCards] = useState<Array<CardElement>>([])
@@ -31,6 +31,34 @@ export function CardsPage() {
     setCards((prev) => prev.filter((prev) => prev.id !== id))
   }
 
+  const handleIncrement = (id: string, property: keyof Attributes) => {
+    setCards((prev) => {
+      const itemIndex = prev.findIndex((item) => item.id === id)
+
+      if (itemIndex < 0) {
+        return prev
+      }
+
+      prev[itemIndex].attributes[property] += 1
+
+      return [...prev]
+    })
+  }
+
+  const handleDecrement = (id: string, property: keyof Attributes) => {
+    setCards((prev) => {
+      const itemIndex = prev.findIndex((item) => item.id === id)
+
+      if (itemIndex < 0) {
+        return prev
+      }
+
+      prev[itemIndex].attributes[property] -= 1
+
+      return [...prev]
+    })
+  }
+
   return (
     <div className="cards-page">
       <div className="cards-page__content-container">
@@ -42,7 +70,12 @@ export function CardsPage() {
           />
         </div>
         <div>
-          <CardGrid cards={cards} onRemoveCard={removeCharacter} />
+          <CardGrid
+            cards={cards}
+            onRemoveCard={removeCharacter}
+            onDecrement={handleDecrement}
+            onIncrement={handleIncrement}
+          />
         </div>
       </div>
     </div>
