@@ -1,5 +1,7 @@
+import { CardsPage } from './pages/cards-page'
+
 function App() {
-  return <h1>UI exercise</h1>
+  return <CardsPage />
 }
 
 export default App
