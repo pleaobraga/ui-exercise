@@ -2,11 +2,11 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { describe, it, expect, vi } from 'vitest'
 import { CardsPage } from '..'
 
-vi.mock('./cards-page.utils', () => ({
+vi.mock('../cards-page.utils', () => ({
   getNewChar: vi.fn((id) => ({
     id: `character-${id}`,
     image: { src: 'image-url.jpg', alt: 'Character Image' },
-    attributes: { health: 0, attack: 0, defense: 0 },
+    attributes: { health: 100, attack: 50, defense: 40 },
   })),
 }))
 
@@ -68,14 +68,14 @@ describe('CardsPage Component', () => {
       name: /increment--button/i,
     })
     fireEvent.click(incrementButton[0])
-    expect(screen.getByText('1')).toBeInTheDocument()
+    expect(screen.getByText('101')).toBeInTheDocument()
 
     const decrementButton = screen.getAllByRole('button', {
       name: /decrement--button/i,
     })
     fireEvent.click(decrementButton[0])
 
-    const value = screen.getAllByText('0')
+    const value = screen.getAllByText('100')
 
     expect(value[0]).toBeInTheDocument()
   })
