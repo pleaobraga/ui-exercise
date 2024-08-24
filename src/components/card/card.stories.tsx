@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Card } from '.'
+import { images } from '../../utils/images'
 
 const meta = {
   title: 'Components/Card',
@@ -15,7 +16,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    text: 'Test',
-    onClick: () => {},
+    imageSrc: images[0].url,
+    imageDimensions: images[0].dimensions,
   },
 }

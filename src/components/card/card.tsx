@@ -8,7 +8,16 @@ import {
 } from './card.constants'
 import { useState } from 'react'
 
-export function Card() {
+export interface CardProps {
+  imageSrc: string
+  imageAlt?: string
+  imageDimensions: {
+    width: number
+    height: number
+  }
+}
+
+export function Card({ imageSrc, imageAlt, imageDimensions }: CardProps) {
   const [statsValue, setStatsValue] = useState({
     [HEALTH_STAT.id]: HEALTH_STAT.defaultValue,
     [ATTACK_STAT.id]: ATTACK_STAT.defaultValue,
@@ -25,7 +34,14 @@ export function Card() {
 
   return (
     <div className="card">
-      <div>Image box</div>
+      <div>
+        <img
+          src={imageSrc}
+          alt={imageAlt ?? 'card image'}
+          height={imageDimensions.height}
+          width={imageDimensions.width}
+        />
+      </div>
       <div className="card__content">
         {CARD_STATS.map(({ name, id }) => (
           <Stat
