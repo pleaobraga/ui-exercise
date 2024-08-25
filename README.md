@@ -137,4 +137,8 @@ Possible future improvments:
 
 - Ensure Consistent Image Sizes: Standardize the size of all images to maintain a uniform appearance across character cards, regardless of the source image dimensions.
 
-- Use a third party library to improve the icons
+- Use a third party library to improve the icons.
+
+- Add a hover style to all buttons.
+
+- Add new features, such as combat between characters, character customization, and more.
