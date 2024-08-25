@@ -4,7 +4,7 @@ This project is a TypeScript-based React application designed to implement vario
 
 This solution replicates a provided mockup using React, focusing on creating a responsive application with specific styles and behaviors. Each card includes randomized header images and controls for adjusting health, attack, and defense stats. The application allows adding new characters with randomized images and resetting all characters' health with global actions. The design is responsive, ensuring cards adapt to different screen sizes, and includes bonus features like character removal and hover effects for an enhanced user experience.
 
-![Application running](./docs/application-running.gif)
+![Application running](./docs/readme-images/application-running.gif)
 
 ## Key Technologies and Libraries Used
 
@@ -15,23 +15,6 @@ This solution replicates a provided mockup using React, focusing on creating a r
 - **React Testing Library**: For testing React components in a user-centric way.
 - **Storybook**: For developing and showcasing UI components in isolation.
 - **SCSS**: For styling components.
-
-## Project Structure
-
-The project is organized into several directories to maintain a clean and scalable architecture. Below is a brief overview of the main folders and files:
-
-```
-src
-├── components
-│   ├── card
-│   ├── global-action-button
-├── pages
-│   └── cards-page
-├── utils
-├── App.tsx
-├── index.css
-├── main.tsx
-```
 
 ## Getting Started
 
@@ -78,7 +61,24 @@ npm run storybook
 
 This will open a new tab in your browser with Storybook running locally.
 
-![Application running](./docs/storybook.png)
+![Application running](./docs/readme-images/storybook.png)
+
+## Project Structure
+
+The project is organized into several directories to maintain a clean and scalable architecture. Below is a brief overview of the main folders and files:
+
+```
+src
+├── components
+│   ├── card
+│   ├── global-action-button
+├── pages
+│   └── cards-page
+├── utils
+├── App.tsx
+├── index.css
+├── main.tsx
+```
 
 ## Project Architecture
 
@@ -91,8 +91,7 @@ The architecture of this project follows best practices for scalability and main
 
 Husky has been implemented in this project to ensure code quality and maintain best practices. It enforces a commit linter, automatically checks and fixes code formatting using Prettier, and runs ESLint to catch potential issues. Additionally, all tests are run before each commit to ensure that no changes break the main codebase. This setup helps maintain a clean and stable codebase, preventing errors from reaching production.
 
-![Application running](./docs/husky.gif)
-
+![Application running](./docs/readme-images/husky.gif)
 
 ## Component Development
 
@@ -112,15 +111,19 @@ ComponentName
 └── index.ts # Entry point for exports
 ```
 
+## Styling Approach
+
+This project uses SCSS for styling, following the BEM (Block Element Modifier) methodology to maintain a consistent and scalable codebase. The use of SCSS allows for nested styles and modularization, making it easier to manage complex stylesheets. Almost all measurements are defined in rem units to ensure responsiveness and scalability, except for smaller measurements like borders in general, which use px for precision. This approach helps create a clean, maintainable, and flexible styling architecture.
+
 ## Testing
 
 The project uses Vitest and React Testing Library for testing. Tests are written for all components to ensure functionality and reliability, achieving more than 90% test coverage.
 
-![Coverage Image](./docs/coverage.png)
+![Coverage Image](./docs/readme-images/coverage.png)
 
 ## Pitfalls and Considerations
 
-This project uses React Strict Mode, which helps identify potential issues by running components and hooks twice in development. As a result, you may notice that state updates (like counters) increase or decrease by two instead of one. This double execution is intentional for detecting side effects and won’t occur in production. Remember, this behavior is normal during development and is designed to improve code quality and performance.
+This project uses **React Strict Mode**, which helps identify potential issues by running components and hooks twice in development. As a result, you may notice that state updates (like stats) increase or decrease by two instead of one. This double execution is intentional for detecting side effects and won’t occur in production. Remember, this behavior is normal during development and is designed to improve code quality and performance.
 
 ## Future Enhancements
 
