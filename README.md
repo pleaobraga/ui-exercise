@@ -43,6 +43,20 @@ npm run dev
 
 This command will start Vite, and the project will be accessible in your browser.
 
+### Building the Project
+
+To build the project use:
+
+```bash
+npm run build
+```
+
+To run locally the project builded use:
+
+```bash
+npm run preview
+```
+
 ### Running Tests
 
 To run all tests in the project, use:
