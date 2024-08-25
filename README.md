@@ -2,6 +2,8 @@
 
 This project is a TypeScript-based React application designed to implement various components and features using modern frontend technologies.
 
+You can view the live application by visiting [this link](https://pleaobraga.github.io/ui-exercise/)..
+
 This solution replicates a provided mockup using React, focusing on creating a responsive application with specific styles and behaviors. Each card includes randomized header images and controls for adjusting health, attack, and defense stats. The application allows adding new characters with randomized images and resetting all characters' health with global actions. The design is responsive, ensuring cards adapt to different screen sizes, and includes bonus features like character removal and hover effects for an enhanced user experience.
 
 ![Application running](./docs/readme-images/application-running.gif)
@@ -76,6 +78,22 @@ npm run storybook
 This will open a new tab in your browser with Storybook running locally.
 
 ![Application running](./docs/readme-images/storybook.png)
+
+### Deploying to GitHub Pages
+
+This project is hosted on GitHub Pages at https://pleaobraga.github.io/ui-exercise/. To deploy the latest version of the application, follow these steps:
+
+Build the project:
+
+```bash
+npm run build
+```
+
+Deploy to GitHub Pages:
+
+```bash
+npm run deploy
+```
 
 ## Project Structure
 
