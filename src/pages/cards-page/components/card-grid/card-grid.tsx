@@ -1,18 +1,18 @@
-import { Attributes, Card, CardElement } from '../../../../components/card'
+import { Stats, Card, CardElement } from '../../../../components/card'
 import './card-grid.styles.scss'
 
 export interface CardGridProps {
   cards: CardElement[]
   onRemoveCard: (id: string) => void
-  onDecrement: (id: string, property: keyof Attributes) => void
-  onIncrement: (id: string, property: keyof Attributes) => void
+  onDecrementStat: (id: string, property: keyof Stats) => void
+  onIncrementStat: (id: string, property: keyof Stats) => void
 }
 
 export function CardGrid({
   cards = [],
   onRemoveCard,
-  onDecrement,
-  onIncrement,
+  onDecrementStat,
+  onIncrementStat,
 }: CardGridProps) {
   if (!cards.length) {
     return (
@@ -24,16 +24,16 @@ export function CardGrid({
 
   return (
     <div className="card-grid card-grid__grid">
-      {cards.map(({ attributes, id, image }) => {
+      {cards.map(({ stats, id, image }) => {
         return (
           <Card
             key={id}
             id={id}
-            attributes={attributes}
+            stats={stats}
             image={image}
             onRemove={onRemoveCard}
-            handleDecrement={onDecrement}
-            handleIncrement={onIncrement}
+            handleDecrementStat={onDecrementStat}
+            handleIncrementStat={onIncrementStat}
           />
         )
       })}

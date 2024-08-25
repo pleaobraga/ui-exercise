@@ -12,7 +12,7 @@ export const CARD_MOCK_1 = {
     src: images[0].url,
     dimensions: images[0].dimensions,
   },
-  attributes: {
+  stats: {
     health: 100,
     attack: 50,
     defense: 40,
@@ -25,7 +25,7 @@ export const CARD_MOCK_2 = {
     src: images[1].url,
     dimensions: images[1].dimensions,
   },
-  attributes: {
+  stats: {
     health: 100,
     attack: 50,
     defense: 40,
@@ -38,7 +38,7 @@ export const CARD_MOCK_3 = {
     src: images[2].url,
     dimensions: images[2].dimensions,
   },
-  attributes: {
+  stats: {
     health: 100,
     attack: 50,
     defense: 40,
@@ -51,7 +51,7 @@ export const CARD_MOCK_4 = {
     src: images[0].url,
     dimensions: images[0].dimensions,
   },
-  attributes: {
+  stats: {
     health: 100,
     attack: 50,
     defense: 40,
@@ -64,7 +64,7 @@ export const CARD_MOCK_5 = {
     src: images[1].url,
     dimensions: images[1].dimensions,
   },
-  attributes: {
+  stats: {
     health: 100,
     attack: 50,
     defense: 40,
@@ -77,7 +77,7 @@ export const CARD_MOCK_6 = {
     src: images[2].url,
     dimensions: images[2].dimensions,
   },
-  attributes: {
+  stats: {
     health: 100,
     attack: 50,
     defense: 40,

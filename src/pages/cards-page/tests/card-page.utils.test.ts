@@ -36,7 +36,7 @@ describe('cards-page.utils', () => {
   })
 
   describe('getNewChar', () => {
-    it('returns a new character object with default attributes', () => {
+    it('returns a new character object with default stats', () => {
       const cardID = 1
       const charImage = images[0]
       vi.spyOn(Math, 'random').mockReturnValue(0)
@@ -45,7 +45,7 @@ describe('cards-page.utils', () => {
 
       expect(newChar).toEqual({
         id: 'card-id-' + cardID,
-        attributes: {
+        stats: {
           attack: 0,
           health: 0,
           defense: 0,

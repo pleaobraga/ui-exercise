@@ -9,9 +9,9 @@ describe('Card Component', () => {
     id: 'card1',
     image: { src: 'image-url.jpg', alt: 'test image' },
     onRemove: vi.fn(),
-    handleDecrement: vi.fn(),
-    handleIncrement: vi.fn(),
-    attributes: {
+    handleDecrementStat: vi.fn(),
+    handleIncrementStat: vi.fn(),
+    stats: {
       health: 100,
       attack: 50,
       defense: 30,
@@ -53,15 +53,15 @@ describe('Card Component', () => {
     })
 
     fireEvent.click(incrementHealthButton[0])
-    expect(mockProps.handleIncrement).toHaveBeenCalledTimes(1)
-    expect(mockProps.handleIncrement).toHaveBeenCalledWith(
+    expect(mockProps.handleIncrementStat).toHaveBeenCalledTimes(1)
+    expect(mockProps.handleIncrementStat).toHaveBeenCalledWith(
       'card1',
       HEALTH_STAT.id
     )
 
     fireEvent.click(decrementHealthButton[0])
-    expect(mockProps.handleDecrement).toHaveBeenCalledTimes(1)
-    expect(mockProps.handleDecrement).toHaveBeenCalledWith(
+    expect(mockProps.handleDecrementStat).toHaveBeenCalledTimes(1)
+    expect(mockProps.handleDecrementStat).toHaveBeenCalledWith(
       'card1',
       HEALTH_STAT.id
     )

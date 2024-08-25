@@ -7,8 +7,8 @@ export function Card({
   id,
   image,
   onRemove,
-  handleDecrement,
-  handleIncrement,
+  handleDecrementStat,
+  handleIncrementStat,
   ...props
 }: CardProps) {
   return (
@@ -27,23 +27,23 @@ export function Card({
         <Stat
           key={HEALTH_STAT.id}
           name={HEALTH_STAT.name}
-          value={props.attributes.health}
-          onDecrement={() => handleDecrement(id, HEALTH_STAT.id)}
-          onIncrement={() => handleIncrement(id, HEALTH_STAT.id)}
+          value={props.stats.health}
+          onDecrement={() => handleDecrementStat(id, HEALTH_STAT.id)}
+          onIncrement={() => handleIncrementStat(id, HEALTH_STAT.id)}
         />
         <Stat
           key={ATTACK_STAT.id}
           name={ATTACK_STAT.name}
-          value={props.attributes.attack}
-          onDecrement={() => handleDecrement(id, ATTACK_STAT.id)}
-          onIncrement={() => handleIncrement(id, ATTACK_STAT.id)}
+          value={props.stats.attack}
+          onDecrement={() => handleDecrementStat(id, ATTACK_STAT.id)}
+          onIncrement={() => handleIncrementStat(id, ATTACK_STAT.id)}
         />
         <Stat
           key={DEFENSE_STAT.id}
           name={DEFENSE_STAT.name}
-          value={props.attributes.defense}
-          onDecrement={() => handleDecrement(id, DEFENSE_STAT.id)}
-          onIncrement={() => handleIncrement(id, DEFENSE_STAT.id)}
+          value={props.stats.defense}
+          onDecrement={() => handleDecrementStat(id, DEFENSE_STAT.id)}
+          onIncrement={() => handleIncrementStat(id, DEFENSE_STAT.id)}
         />
       </div>
     </div>

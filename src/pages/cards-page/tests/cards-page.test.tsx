@@ -6,7 +6,7 @@ vi.mock('../cards-page.utils', () => ({
   getNewChar: vi.fn((id) => ({
     id: `character-${id}`,
     image: { src: 'image-url.jpg', alt: 'Character Image' },
-    attributes: { health: 100, attack: 50, defense: 40 },
+    stats: { health: 100, attack: 50, defense: 40 },
   })),
 }))
 
@@ -58,7 +58,7 @@ describe('CardsPage Component', () => {
     })
   })
 
-  it('increments and decrements the character attributes', () => {
+  it('increments and decrements the character stats', () => {
     render(<CardsPage />)
 
     const addButton = screen.getByText('Add Character')

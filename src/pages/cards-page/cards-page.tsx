@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { getNewChar } from './cards-page.utils'
 import { CardGrid } from './components/card-grid'
 import { GlobalActionButton } from '../../components/global-action-button'
-import { Attributes, CardElement } from '../../components/card'
+import { Stats, CardElement } from '../../components/card'
 
 import './cards-page.styles.scss'
 
@@ -23,8 +23,8 @@ export function CardsPage() {
       prev.map((item) => {
         return {
           ...item,
-          attributes: {
-            ...item.attributes,
+          stats: {
+            ...item.stats,
             health: 0,
           },
         }
@@ -36,7 +36,7 @@ export function CardsPage() {
     setCards((prev) => prev.filter((prev) => prev.id !== id))
   }
 
-  const handleIncrement = (id: string, property: keyof Attributes) => {
+  const handleIncrementStat = (id: string, property: keyof Stats) => {
     setCards((prev) => {
       const itemIndex = prev.findIndex((item) => item.id === id)
 
@@ -44,13 +44,13 @@ export function CardsPage() {
         return prev
       }
 
-      prev[itemIndex].attributes[property] += 1
+      prev[itemIndex].stats[property] += 1
 
       return [...prev]
     })
   }
 
-  const handleDecrement = (id: string, property: keyof Attributes) => {
+  const handleDecrementStat = (id: string, property: keyof Stats) => {
     setCards((prev) => {
       const itemIndex = prev.findIndex((item) => item.id === id)
 
@@ -58,7 +58,7 @@ export function CardsPage() {
         return prev
       }
 
-      prev[itemIndex].attributes[property] -= 1
+      prev[itemIndex].stats[property] -= 1
 
       return [...prev]
     })
@@ -78,8 +78,8 @@ export function CardsPage() {
           <CardGrid
             cards={cards}
             onRemoveCard={removeCharacter}
-            onDecrement={handleDecrement}
-            onIncrement={handleIncrement}
+            onDecrementStat={handleDecrementStat}
+            onIncrementStat={handleIncrementStat}
           />
         </div>
       </div>

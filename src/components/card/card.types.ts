@@ -1,4 +1,4 @@
-export interface Attributes {
+export interface Stats {
   health: number
   attack: number
   defense: number
@@ -6,7 +6,7 @@ export interface Attributes {
 
 export interface CardElement {
   id: string
-  attributes: Attributes
+  stats: Stats
   image: {
     src: string
     alt?: string
@@ -19,6 +19,6 @@ export interface CardElement {
 
 export interface CardProps extends CardElement {
   onRemove: (id: string) => void
-  handleIncrement: (id: string, property: keyof Attributes) => void
-  handleDecrement: (id: string, property: keyof Attributes) => void
+  handleIncrementStat: (id: string, property: keyof Stats) => void
+  handleDecrementStat: (id: string, property: keyof Stats) => void
 }

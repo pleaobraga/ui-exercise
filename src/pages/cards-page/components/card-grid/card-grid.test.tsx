@@ -7,7 +7,7 @@ describe('CardGrid Component', () => {
   const mockCard: CardElement = {
     id: 'card1',
     image: { src: 'image-url.jpg', alt: 'test image' },
-    attributes: {
+    stats: {
       health: 100,
       attack: 50,
       defense: 30,
@@ -17,8 +17,8 @@ describe('CardGrid Component', () => {
   const mockProps = {
     cards: [mockCard],
     onRemoveCard: vi.fn(),
-    onDecrement: vi.fn(),
-    onIncrement: vi.fn(),
+    onDecrementStat: vi.fn(),
+    onIncrementStat: vi.fn(),
   }
 
   it('renders empty state when there are no cards', () => {
@@ -26,8 +26,8 @@ describe('CardGrid Component', () => {
       <CardGrid
         cards={[]}
         onRemoveCard={mockProps.onRemoveCard}
-        onDecrement={mockProps.onDecrement}
-        onIncrement={mockProps.onIncrement}
+        onDecrementStat={mockProps.onDecrementStat}
+        onIncrementStat={mockProps.onIncrementStat}
       />
     )
 
