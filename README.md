@@ -91,6 +91,9 @@ The architecture of this project follows best practices for scalability and main
 
 Husky has been implemented in this project to ensure code quality and maintain best practices. It enforces a commit linter, automatically checks and fixes code formatting using Prettier, and runs ESLint to catch potential issues. Additionally, all tests are run before each commit to ensure that no changes break the main codebase. This setup helps maintain a clean and stable codebase, preventing errors from reaching production.
 
+![Application running](./docs/husky.gif)
+
+
 ## Component Development
 
 Everything was created with minimal third-party libraries to demonstrate a deep understanding of React, HTML, and CSS/SASS. All styles were developed from scratch, avoiding any CSS frameworks like Bootstrap or Tailwind, and component libraries like Chakra UI. This approach was chosen to showcase proficiency in building custom solutions using React.
