@@ -12,6 +12,6 @@ export const CARD_MOCK = {
     defense: 40,
   },
   onRemove: () => {},
-  handleIncrement: () => {},
-  handleDecrement: () => {},
+  handleDecrementStat: () => {},
+  handleIncrementStat: () => {},
 }

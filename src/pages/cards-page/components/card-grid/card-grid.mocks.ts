@@ -2,8 +2,8 @@ import { images } from '../../../../utils/images'
 
 export const FUNCTIONS_MOCK = {
   onRemoveCard: () => {},
-  onDecrement: () => {},
-  onIncrement: () => {},
+  onDecrementStat: () => {},
+  onIncrementStat: () => {},
 }
 
 export const CARD_MOCK_1 = {
