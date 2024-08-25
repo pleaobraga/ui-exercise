@@ -13,6 +13,10 @@
     .title {
       text-transform: capitalize;
     }
+
+    .value {
+      text-overflow: ellipsis;
+    }
   }
 
   &__actions-container {

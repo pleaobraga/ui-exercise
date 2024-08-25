@@ -78,6 +78,8 @@ npm run storybook
 
 This will open a new tab in your browser with Storybook running locally.
 
+![Application running](./docs/storybook.png)
+
 ## Project Architecture
 
 The architecture of this project follows best practices for scalability and maintainability, using components structured in a way that promotes reuse and modularity.
@@ -85,7 +87,13 @@ The architecture of this project follows best practices for scalability and main
 - **SOLID Principles**: Components are designed following SOLID principles to ensure they are single-responsibility and easy to extend or modify.
 - **Feature Design**: Common components that are used across multiple features are kept in the main components folder to ensure reusability and maintainability. Components that are specific to a particular feature are placed in subfolders within the main components folder or close to the feature they are associated with. If a component is not intended for reuse, it is stored near where it is used to maintain a clear and organized structure, making the codebase easier to navigate and understand.
 
+## Code Quality with Husky
+
+Husky has been implemented in this project to ensure code quality and maintain best practices. It enforces a commit linter, automatically checks and fixes code formatting using Prettier, and runs ESLint to catch potential issues. Additionally, all tests are run before each commit to ensure that no changes break the main codebase. This setup helps maintain a clean and stable codebase, preventing errors from reaching production.
+
 ## Component Development
+
+Everything was created with minimal third-party libraries to demonstrate a deep understanding of React, HTML, and CSS/SASS. All styles were developed from scratch, avoiding any CSS frameworks like Bootstrap or Tailwind, and component libraries like Chakra UI. This approach was chosen to showcase proficiency in building custom solutions using React.
 
 Each component is designed with the following file structure to ensure consistency and ease of use:
 
@@ -114,3 +122,13 @@ This project uses React Strict Mode, which helps identify potential issues by ru
 ## Future Enhancements
 
 The architecture and setup of this project are designed to easily accommodate new features and pages, adhering to scalable software development practices.
+
+Possible future improvments:
+
+- Add a Fallback Image: Implement a fallback image for character cards in case the main image fails to load, ensuring a consistent user experience.
+
+- Define Maximum and Minimum Stat Values: Set upper and lower limits for each stat (health, attack, defense) to prevent unrealistic values and enhance game logic.
+
+- Ensure Consistent Image Sizes: Standardize the size of all images to maintain a uniform appearance across character cards, regardless of the source image dimensions.
+
+- Use a third party library to improve the icons
