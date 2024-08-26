@@ -1,12 +1,17 @@
+$actions-container-width: 87px;
+$stat-gap: 1rem;
+
 .stat {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: $stat-gap;
 
   &__placeholder-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
+    max-width: calc(100% - $actions-container-width - $stat-gap);
 
     color: white;
 
@@ -16,6 +21,7 @@
 
     .value {
       text-overflow: ellipsis;
+      overflow: hidden;
     }
   }
 
