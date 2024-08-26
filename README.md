@@ -95,6 +95,14 @@ Deploy to GitHub Pages:
 npm run deploy
 ```
 
+## Solution Design
+
+This solution was built following the SOLID principle of Single Responsibility, where the code is divided into smaller, focused components, each handling a specific function. The page component is responsible for providing the necessary data, while individual components act as "dumb" components, meaning they primarily render the data they receive without managing state or side effects. This approach adheres to the functional programming paradigm, in line with React’s best practices for performance and maintainability.
+
+A challenge encountered was the lack of limitations on stat values, which could potentially break the layout. To address this, the stats line was broken down, and the CSS ellipsis property was used to prevent layout issues caused by overly long text or values. This solution ensures a stable and visually consistent interface even when unexpected data is displayed.
+
+![REsponsive Layout Solution](./docs/readme-images/resposive-solution.gif)
+
 ## Project Structure
 
 The project is organized into several directories to maintain a clean and scalable architecture. Below is a brief overview of the main folders and files:
@@ -117,7 +125,10 @@ src
 The architecture of this project follows best practices for scalability and maintainability, using components structured in a way that promotes reuse and modularity.
 
 - **SOLID Principles**: Components are designed following SOLID principles to ensure they are single-responsibility and easy to extend or modify.
+
 - **Feature Design**: Common components that are used across multiple features are kept in the main components folder to ensure reusability and maintainability. Components that are specific to a particular feature are placed in subfolders within the main components folder or close to the feature they are associated with. If a component is not intended for reuse, it is stored near where it is used to maintain a clear and organized structure, making the codebase easier to navigate and understand.
+
+- **Kebab case**: The project uses kebab case for naming files and folders to enhance readability and avoid issues with Git. This naming convention also improves compatibility across different operating systems by using lowercase letters and hyphens instead of spaces or special characters.
 
 ## Code Quality with Husky
 
